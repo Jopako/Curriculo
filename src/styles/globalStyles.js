@@ -2,18 +2,25 @@ import { createGlobalStyle } from "styled-components";
 
  const myGlobalStyles = createGlobalStyle`
 
-body{
-
-    background-color: white;
+body 
+{
     margin: 0;
-    height: 100vh;
-    font-size:20px;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;     
+    padding: 0;
+    width: 100vw;   
+    height: 100vh; 
+    background-color: black; 
+    font-family: "Press Start 2P", system-ui;
+    
 }
+
+  
+
+  #root 
+  {
+    width: 100%;
+    height: 100%;
+ 
+  }
 
 `
 

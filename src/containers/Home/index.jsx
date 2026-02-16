@@ -29,7 +29,7 @@ function Home()
 
             <i className="fa-solid fa-minus" style={{color:"yellow"}}></i>  
             <i class="fa-solid fa-expand" style={{color:"#084808 "}}></i> 
-            <i class="fa-solid fa-x" style={{color:"red"}}></i>
+
 
         </Cabecalho>
 
@@ -50,6 +50,7 @@ function Home()
                 
 
                 type="text"   
+                placeholder="!comandos"
                 ref={inputRef}
                 value= {input}
                 onChange={e => setInput(e.target.value)}
@@ -63,17 +64,30 @@ function Home()
                         let newOutput = "";
                         newOutput = output + "\n "+ "$ " + input + "\n";
 
-                        switch(input){
+                        switch(input.toLocaleLowerCase())
+                        {
+                        
+                            case "!linkedln":
+                                newOutput += "Aqui está meu linkedln: \n link..."
+                                break;
+
+                        case "!comandos":
+                            newOutput += "!github \n !linkedln \n !curriculo \n !clear / !c"
+                            break;
+
 
                         case "!github":
                             newOutput =   "Aqui está meu gitHub: \n https://github.com/Jopako"
                             break;
                             
-                        case "c":
-                        case "clear":
+                        case "!c":
+                        case "!clear":
                             setOutput("");
                             setInput("");
                             return;
+
+                        case "!curriculo":
+                            break;
 
 
                         default:
