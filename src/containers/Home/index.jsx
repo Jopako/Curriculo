@@ -1,119 +1,114 @@
-import { Historico, Terminal , Input, Cabecalho, SectionTerminal} from "./styles"
+import {
+  Historico,
+  Terminal,
+  Input,
+  Cabecalho,
+  SectionTerminal,
+  Prompt,
+  Highlight,
+  Ascii
+} from "./homeStyles";
+
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Home()
-{
+function Home() {
+  const [input, setInput] = useState("");
+  const [output, setOutput] = useState("");
+  const inputRef = useRef();
+  const navigate = useNavigate();
 
-    const [input,setInput] = useState("");
-    const [output,setOutput] = useState("");
-    const inputRef = useRef();
-    
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
-    useEffect(()=>
-        {
+  return (
+    <Terminal onClick={() => inputRef.current?.focus()}>
 
-        inputRef.current.focus()
+      <Cabecalho>
+        <i className="fa-solid fa-minus" style={{ color: "yellow" }}></i>
+        <i className="fa-solid fa-expand" style={{ color: "#084808" }}></i>
+      </Cabecalho>
 
-    },[])
-
-
-    return(
-
-      
-
-        <Terminal onClick={() => inputRef.current && inputRef.current.focus()}>
-
-            
-
-        <Cabecalho>   
-
-            <i className="fa-solid fa-minus" style={{color:"yellow"}}></i>  
-            <i class="fa-solid fa-expand" style={{color:"#084808 "}}></i> 
+      <Historico>
 
 
-        </Cabecalho>
+  <Ascii>
+{`                                                                                                                                                                                                                                                                                                                                  
+               ██            ▄ ▄                                         
+              ██  ▀▀        ▀ ▀              ▄▄                          
+▄████▄  ▄▄   ██   ██ ▄███▄  ▀▀█▄ ▄███▄ ████▄ ██ ▄█▀    ▄█▀█▄ ██ ██ ▄█▀█▄ 
+▀▀  ▀████▀  ██   ▀██ ██ ██ ▄█▀██ ██ ██ ██ ██ ████      ██▄█▀  ███  ██▄█▀ 
+           ██     ██ ▀███▀ ▀█▄██ ▀███▀ ████▀ ██ ▀█▄ ██ ▀█▄▄▄ ██ ██ ▀█▄▄▄ 
+                  ██                   ██                                
+                ▀▀▀                    ▀▀                                                                                                                                                                                                                                                                                                            
+`}
+  </Ascii>
 
-            <SectionTerminal>
+        <p style={{ margin: 0 }}>
+          Bem-vindo(a) ao meu terminal web.
+          <br />
+          Para uma lista de comandos, digite{" "}
+          <Highlight>'!comandos'</Highlight>.
+        </p>
 
-                  <p style={{margin: 0, color: "green"}}>
-                    
-                                        
-                    usuario@joao:~/Curriculo$
+        {output}
+      </Historico>
 
-                 </p>
+      <SectionTerminal>
+        <Prompt>usuario@joao:~/Currículo$</Prompt>
 
+        <Input>
+          <input
+            type="text"
+            placeholder="!comandos"
+            ref={inputRef}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+            let newOutput = output + `\n\n$ ${input}\n`;
 
-            <Input>
+                switch (input.toLowerCase()) {
+                  case "!linkedin":
+                    newOutput += "Aqui está meu LinkedIn:\nlink...";
+                    break;
 
-                <input 
+                  case "!comandos":
+                    newOutput +=
+                      "!github\n!linkedin\n!curriculo\n!clear / !c";
+                    break;
 
-                
+                  case "!github":
+                    newOutput +=
+                      "Aqui está meu GitHub:\nhttps://github.com/Jopako";
+                    break;
 
-                type="text"   
-                placeholder="!comandos"
-                ref={inputRef}
-                value= {input}
-                onChange={e => setInput(e.target.value)}
-                
-                onKeyDown={e=>
-                    {
+                  case "!c":
+                  case "!clear":
+                    setOutput("");
+                    setInput("");
+                    return;
 
-                        
-                    if (e.key === "Enter")
-                    {
-                        let newOutput = "";
-                        newOutput = output + "\n "+ "$ " + input + "\n";
+                  case "!curriculo":
+                    navigate("/curriculo");
+                    setInput("");
+                    return;
 
-                        switch(input.toLocaleLowerCase())
-                        {
-                        
-                            case "!linkedln":
-                                newOutput += "Aqui está meu linkedln: \n link..."
-                                break;
+                  default:
+                    newOutput += "Comando desconhecido.";
+                }
 
-                        case "!comandos":
-                            newOutput += "!github \n !linkedln \n !curriculo \n !clear / !c"
-                            break;
+                setOutput(newOutput);
+                setInput("");
+              }
+            }}
+          />
+        </Input>
+      </SectionTerminal>
 
-
-                        case "!github":
-                            newOutput =   "Aqui está meu gitHub: \n https://github.com/Jopako"
-                            break;
-                            
-                        case "!c":
-                        case "!clear":
-                            setOutput("");
-                            setInput("");
-                            return;
-
-                        case "!curriculo":
-                            break;
-
-
-                        default:
-                            newOutput += "Comando desconhecido."
-                        }
-                        setOutput(newOutput)
-                        setInput("")
-                    }
-                       
-                }}
-
-                />
-                
-            </Input>
-
-            </SectionTerminal>
-
-            <Historico>
-                
-            {output}
-            </Historico>
-
-        
-
-        </Terminal>
-    )
+    </Terminal>
+  );
 }
 
-export default Home
+export default Home;
