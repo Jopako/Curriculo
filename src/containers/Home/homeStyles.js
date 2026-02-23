@@ -13,6 +13,13 @@ export const Terminal = styled.div`
   box-sizing: border-box;
   font-family: monospace;
   overflow: hidden;
+
+color: #a0ffcc; 
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+  
+  text-shadow: 
+    3px 3px 0px #000, 
+    0 0 20px rgba(0, 255, 136, 0.6);
 `;
 
 export const Historico = styled.div`

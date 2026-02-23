@@ -17,6 +17,7 @@ function Home() {
   const [output, setOutput] = useState("");
   const inputRef = useRef();
   const navigate = useNavigate();
+  let response;
 
   useEffect(() => {
     inputRef.current.focus();
@@ -26,7 +27,7 @@ function Home() {
     <Terminal onClick={() => inputRef.current?.focus()}>
 
       <Cabecalho>
-        <i className="fa-solid fa-minus" style={{ color: "yellow" }}></i>
+        <i onClick={()=> navigate("/entry")} className="fa-solid fa-minus" style={{ color: "yellow" }}></i>
         <i className="fa-solid fa-expand" style={{ color: "#084808" }}></i>
       </Cabecalho>
 
@@ -82,6 +83,7 @@ function Home() {
                   case "!github":
                     newOutput +=
                       "Aqui está meu GitHub:\nhttps://github.com/Jopako";
+                      
                     break;
 
                   case "!c":

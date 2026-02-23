@@ -11,11 +11,12 @@ function App()
 
             <Route path="/" element={<Entry />} />
             <Route path="/home" element={<Home/>} />
-            <Route path="curriculo" element={<Curriculo/>} />
+            <Route path="/curriculo" element={<Curriculo/>} />
+            <Route path="entry" element={<Entry/>} />
 
         </Routes>
 
     )
-}
+} 
 
 export default App
