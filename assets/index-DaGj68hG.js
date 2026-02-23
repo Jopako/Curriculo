@@ -213,4 +213,4 @@ body
  
   }
 
-`;op.createRoot(document.getElementById("root")).render(yt.jsx(M.StrictMode,{children:yt.jsxs(Dg,{basename:"/Curriculo",children:[yt.jsx(nS,{}),yt.jsx(aS,{})]})}));
+`;op.createRoot(document.getElementById("root")).render(yt.jsx(M.StrictMode,{children:yt.jsxs(Dg,{children:[yt.jsx(nS,{}),yt.jsx(aS,{})]})}));
