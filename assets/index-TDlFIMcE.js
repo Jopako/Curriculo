@@ -103,7 +103,7 @@ link...`;break;case"!comandos":E+=`!github
 !linkedin
 !curriculo
 !clear / !c`;break;case"!github":E+=`Aqui está meu GitHub:
-https://github.com/Jopako`;break;case"!c":case"!clear":f(""),c("");return;case"!curriculo":h("/curriculo"),c("");return;default:E+="Comando desconhecido."}f(E),c("")}}})})]})]})}const I1=Oe.div`
+https://github.com/Jopako`;break;case"!c":case"!clear":f(""),c("");return;case"!curriculo":h("/resume"),c("");return;default:E+="Comando desconhecido."}f(E),c("")}}})})]})]})}const I1=Oe.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -182,7 +182,7 @@ https://github.com/Jopako`;break;case"!c":case"!clear":f(""),c("");return;case"!
     flex-direction: column;
     gap: 1em;
   }
-`;function Lm(){const u=Wr();return yt.jsxs(I1,{children:[yt.jsx("p",{style:{fontSize:"30px"},children:"Bem-vindo(a) ao currículo de"}),yt.jsx(P1,{children:"João Paulo Kowalski"}),yt.jsxs(tS,{children:[yt.jsx("button",{onClick:()=>u("/home"),children:"Minhas redes"}),yt.jsx("button",{onClick:()=>u("/curriculo"),children:"Currículo"})]})]})}const eS=Oe.div`
+`;function Lm(){const u=Wr();return yt.jsxs(I1,{children:[yt.jsx("p",{style:{fontSize:"30px"},children:"Bem-vindo(a) ao currículo de"}),yt.jsx(P1,{children:"João Paulo Kowalski"}),yt.jsxs(tS,{children:[yt.jsx("button",{onClick:()=>u("/home"),children:"Minhas redes"}),yt.jsx("button",{onClick:()=>u("/resume"),children:"Currículo"})]})]})}const eS=Oe.div`
 
 background-color:yellow;
 height:100%;
@@ -191,7 +191,7 @@ justify-content:center;
 align-items:center;
 
 
-`;function lS(){return yt.jsx(eS,{children:yt.jsx("h1",{children:"Em progresso..."})})}function aS(){return yt.jsxs(cg,{children:[yt.jsx(su,{path:"/",element:yt.jsx(Lm,{})}),yt.jsx(su,{path:"/home",element:yt.jsx(F1,{})}),yt.jsx(su,{path:"/curriculo",element:yt.jsx(lS,{})}),yt.jsx(su,{path:"entry",element:yt.jsx(Lm,{})})]})}const nS=X1`
+`;function lS(){return yt.jsx(eS,{children:yt.jsx("h1",{children:"Em progresso..."})})}function aS(){return yt.jsxs(cg,{children:[yt.jsx(su,{path:"/",element:yt.jsx(Lm,{})}),yt.jsx(su,{path:"/home",element:yt.jsx(F1,{})}),yt.jsx(su,{path:"/resume",element:yt.jsx(lS,{})}),yt.jsx(su,{path:"entry",element:yt.jsx(Lm,{})})]})}const nS=X1`
 
 body 
 {
