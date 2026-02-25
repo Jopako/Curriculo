@@ -1,7 +1,7 @@
 import { Routes , Route } from "react-router-dom";
 import Home from './containers/Home'
 import Entry from './containers/Entry'
-import Curriculo from "./containers/Curriculo";
+import Resume from "./containers/Resume";
 
 function App()
 {
@@ -11,7 +11,7 @@ function App()
 
             <Route path="/" element={<Entry />} />
             <Route path="/home" element={<Home/>} />
-            <Route path="/curriculo" element={<Curriculo/>} />
+            <Route path="/resume" element={<Resume/>} />
             <Route path="entry" element={<Entry/>} />
 
         </Routes>

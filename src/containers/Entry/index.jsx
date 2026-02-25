@@ -23,7 +23,7 @@ return(
 
             </button>
 
-            <button onClick={() => navigate("/curriculo")}>
+            <button onClick={() => navigate("/resume")}>
 
                 Currículo
 

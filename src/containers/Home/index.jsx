@@ -17,7 +17,6 @@ function Home() {
   const [output, setOutput] = useState("");
   const inputRef = useRef();
   const navigate = useNavigate();
-  let response;
 
   useEffect(() => {
     inputRef.current.focus();
@@ -93,7 +92,7 @@ function Home() {
                     return;
 
                   case "!curriculo":
-                    navigate("/curriculo");
+                    navigate("/resume");
                     setInput("");
                     return;
 

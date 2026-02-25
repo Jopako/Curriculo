@@ -1,6 +1,6 @@
-import { Section } from './curriculoStyles'
+import { Section } from './resumeStyles'
 
-function Curriculo ()
+function Resume ()
 {
     
     
@@ -20,4 +20,4 @@ function Curriculo ()
 
 }
 
-export default Curriculo
+export default Resume
