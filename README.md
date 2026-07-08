@@ -1,7 +1,7 @@
 
 <div align="center">
   
-<img width="480" height="80" alt="curriculo_interativo_banner_transparente" src="https://github.com/user-attachments/assets/09ecc08b-afcc-4e74-891b-c68c00bddffd" />
+<img width="480" height="80" alt="curriculo_interativo_banner_v2" src="https://github.com/user-attachments/assets/6327dfb0-bdd2-4bec-b90f-3e93f4e0ea36" />
 
 
 ---
