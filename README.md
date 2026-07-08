@@ -1,8 +1,10 @@
 
 <div align="center">
   
+<img width="480" height="80" alt="curriculo_interativo_banner_transparente" src="https://github.com/user-attachments/assets/09ecc08b-afcc-4e74-891b-c68c00bddffd" />
 
-# Currículo Interativo
+
+---
 
 Este projeto é uma aplicação web em React para apresentar um currículo de forma interativa e visualmente diferente. A interface combina uma página de entrada, um terminal estilizado e uma página de currículo em formato profissional.
 
@@ -10,6 +12,8 @@ Este projeto é uma aplicação web em React para apresentar um currículo de fo
 
 </div>
 
+---
+ 
 ## Funcionalidades
 
 - Página inicial com uma experiência visual inspirada em terminal
@@ -24,14 +28,15 @@ Este projeto é uma aplicação web em React para apresentar um currículo de fo
 
   <img width="1160" height="875" alt="image" src="https://github.com/user-attachments/assets/7eb8abd1-8abc-44b4-aaaf-ff750e991822" />
 
+---
 
 ## Tecnologias utilizadas
 
-- React
-- Vite
-- React Router DOM
-- Styled Components
-- Font Awesome
+
+  [![My Skills](https://skillicons.dev/icons?i=react,vite,js,html,css,nodejs&perline=3)](https://skillicons.dev)
+
+
+---
 
 ## Estrutura do projeto
 
@@ -39,6 +44,8 @@ Este projeto é uma aplicação web em React para apresentar um currículo de fo
 - `src/containers/Home` — terminal interativo
 - `src/containers/Resume` — currículo em formato de página
 - `src/styles` — estilos globais
+
+---
 
 ## Como executar localmente
 
@@ -55,6 +62,8 @@ Este projeto é uma aplicação web em React para apresentar um currículo de fo
    ```
 
 3. Abra o endereço exibido no terminal no navegador.
+
+---
 
 
 ## Autor
